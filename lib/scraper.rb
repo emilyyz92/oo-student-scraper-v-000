@@ -22,11 +22,11 @@ class Scraper
       if a.attr('href').include?("twitter")
         student_hash[:twitter] = a.attr('href')
       elsif a.attr('href').include?("linkedin")
-        student_hash[:linkedin] = a.value
+        student_hash[:linkedin] = a.attr('href')
       elsif a.attr('href').include?("github")
-        student_hash[:github] = a.value
+        student_hash[:github] = a.attr('href')
       elsif a.attr('href').include?(".com")
-        student_hash[:blog] = a.attr('href').value
+        student_hash[:blog] = a.attr('href')
       end
     end
     # student_hash[:linkedin] = doc.css(".social-icon-container").detect do |a|
