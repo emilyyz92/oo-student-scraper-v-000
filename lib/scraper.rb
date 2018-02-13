@@ -38,7 +38,7 @@ class Scraper
     # end
     binding.pry
     student_hash[:profile_quote] = doc.css(".profile-quote").text
-    student_hash[:bio] = doc.css(".description-holder p").value
+    student_hash[:bio] = doc.css(".description-holder p").text
     student_hash
   end
 
