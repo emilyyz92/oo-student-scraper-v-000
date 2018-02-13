@@ -37,7 +37,7 @@ class Scraper
     #    a.css("a").attr('href').value.include?("github")
     # end
     binding.pry
-    student_hash[:profile_quote] = doc.css(".profile-quote").value
+    student_hash[:profile_quote] = doc.css(".profile-quote").text
     student_hash[:bio] = doc.css(".description-holder p").value
     student_hash
   end
