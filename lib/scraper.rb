@@ -25,7 +25,7 @@ class Scraper
         student_hash[:linkedin] = a.value
       elsif a.attr('href').value.include?("github")
         student_hash[:github] = a.value
-      else
+      elsif a.attr('href').value.include?(".com")
         student_hash[:blog] = a.attr('href').value
       end
     end
