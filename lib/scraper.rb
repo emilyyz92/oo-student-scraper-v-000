@@ -20,7 +20,7 @@ class Scraper
     student_hash = {}
     student_hash[:twitter] = doc.css(".social-icon-container").detect do |a|
       binding.pry
-       a.css("a").attr('href').value.include?("twitter")
+      a.css("a").attr('href').value.include?("twitter")
     end
     student_hash[:linkedin] = doc.css(".social-icon-container").detect do |a|
        a.css("a").attr('href').value.include?("linkedin")
