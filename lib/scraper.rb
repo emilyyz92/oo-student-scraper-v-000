@@ -29,12 +29,14 @@ class Scraper
         student_hash[:blog] = a.value
       end
     end
-    student_hash[:linkedin] = doc.css(".social-icon-container").detect do |a|
-       a.css("a").attr('href').value.include?("linkedin")
-    end
-    student_hash[:github] = doc.css(".social-icon-container").detect do |a|
-       a.css("a").attr('href').value.include?("github")
-    end
+    # student_hash[:linkedin] = doc.css(".social-icon-container").detect do |a|
+    #    a.css("a").attr('href').value.include?("linkedin")
+    # end
+    # student_hash[:github] = doc.css(".social-icon-container").detect do |a|
+    #    a.css("a").attr('href').value.include?("github")
+    # end
+
+    
   end
 
 end
