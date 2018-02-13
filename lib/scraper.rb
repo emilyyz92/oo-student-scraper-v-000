@@ -36,7 +36,6 @@ class Scraper
     # student_hash[:github] = doc.css(".social-icon-container").detect do |a|
     #    a.css("a").attr('href').value.include?("github")
     # end
-    binding.pry
     student_hash[:profile_quote] = doc.css(".profile-quote").text
     student_hash[:bio] = doc.css(".description-holder p").text
     student_hash
